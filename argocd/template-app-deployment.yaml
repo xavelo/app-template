@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: template-app-deployment
+  annotations:
+    commitID: ""
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: template-app
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: template-app
+    spec:
+      containers:
+        - name: template-app
+          image: 'xavelo/template-app:latest'
+          ports:
+            - containerPort: 80
