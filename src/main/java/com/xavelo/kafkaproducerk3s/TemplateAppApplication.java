@@ -6,10 +6,10 @@ import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
 @PropertySource("classpath:git.properties")
-public class PiApiApplication {
+public class TemplateAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PiApiApplication.class, args);
+		SpringApplication.run(TemplateAppApplication.class, args);
 	}
 
 }

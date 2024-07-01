@@ -14,7 +14,7 @@ public class TemplateAppController {
     public String ping() {
         logger.info("ping received");
         logger.info("pong returned");
-        return "pooooong";
+        return "poooooong";
     }
 
 }
